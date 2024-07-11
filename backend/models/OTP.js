@@ -16,31 +16,23 @@ const OTPSchema = new mongoose.Schema({
   },
 });
 
-
-async function sendVerificationEmail(email, otp){
-    try{
-        const mailResponse = await mailSender(
-            email,
-            "Verification Email",
-            otp
-        )
-        console.log("Email Response", mailResponse.response)
-    }
-    catch(error){
-        console.log("Error while sending email",error)
-        throw error;
-    }
+async function sendVerificationEmail(email, otp) {
+  try {
+    const mailResponse = await mailSender(email, "Verification Email", otp);
+    console.log("Email Response", mailResponse.response);
+  } catch (error) {
+    console.log("Error while sending email", error);
+    throw error;
+  }
 }
 
+OTPSchema.pre("save", async function (next) {
+  console.log("New document saved to database");
 
-
-OTPSchema.pre("save", async function(next){
-	console.log("New document saved to database");
-
-        if(this.isNew){
-            await sendVerificationEmail(this.email, this.otp)
-        }
-        next();
-})
+  if (this.isNew) {
+    await sendVerificationEmail(this.email, this.otp);
+  }
+  next();
+});
 
 module.exports = mongoose.model("OTP", OTPSchema);

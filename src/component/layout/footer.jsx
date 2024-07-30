@@ -32,15 +32,7 @@ let FooterItemList = [
     },
 ]
 
-class Footer extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            newsName: '',
-            newsEmail: '',
-        };
-    }
-    render() { 
+const Footer = () => {
         return (
             <footer className="footer-section">
                 <div className="footer-top">
@@ -181,7 +173,7 @@ class Footer extends Component {
                 </div>
             </footer>
         );
-    }
+    
 }
  
 export default Footer;

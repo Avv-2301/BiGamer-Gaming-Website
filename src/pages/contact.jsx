@@ -31,19 +31,7 @@ let infoListContent = [
     },
 ]
 
-class ContactUs extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            contactName: '',
-            contactEmail: '',
-            contactSubject: '',
-            contactNumber: '',
-            contactMassage: '',
-        };
-    }
-
-    render() { 
+const ContactUs = () => {
         return (
             <Fragment>
                 <Header />
@@ -161,7 +149,6 @@ class ContactUs extends Component {
                 <Footer />
             </Fragment>
         );
-    }
 }
  
 export default ContactUs;

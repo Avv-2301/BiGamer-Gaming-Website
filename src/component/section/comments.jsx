@@ -1,17 +1,16 @@
-import { Component } from "react";
 
 const title = "02 Comment";
 
 let CommentsList = [
     {
-        imgUrl: 'assets/images/blog/author/02.jpg',
+        imgUrl: 'blog/author/02.jpg',
         imgAlt: 'author thumb',
         Name: 'Umme Nishat',
         Date: 'May 15, 2022 at 12:41 pm',
         Massage: 'The inner sanctuary, I throw myself down among the tall grass bye the trckli stream and, as I lie close to the earth',
     },
     {
-        imgUrl: 'assets/images/blog/author/03.jpg',
+        imgUrl: 'blog/author/03.jpg',
         imgAlt: 'author thumb',
         Name: 'Rajib Raj',
         Date: 'May 15, 2022 at 12:41 pm',
@@ -19,9 +18,9 @@ let CommentsList = [
     },
 ]
 
-class Comments extends Component {
-    render() { 
-        return (
+function Comment(){
+    return(
+        <div>
             <div id="comments" className="comments">
                 <h6 className="comment-title h7">{title}</h6>
                 <ul className="lab-ul comment-list">
@@ -50,8 +49,8 @@ class Comments extends Component {
                     
                 </ul>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
-export default Comments;
+
+export default Comment;

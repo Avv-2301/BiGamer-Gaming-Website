@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import Rating from "./rating";
 
@@ -9,31 +8,31 @@ const btnText = "Browse All games";
 
 let CollectionListContentTwo = [
     {
-        imgUrlOne: 'assets/images/match/teamsm/teamsm-1.png',
+        imgUrlOne: 'match/teamsm/teamsm-1.png',
         imgAltOne: 'team thumb',
-        imgUrlTwo: 'assets/images/match/teamsm/teamsm-2.png',
+        imgUrlTwo: 'match/teamsm/teamsm-2.png',
         imgAltTwo: 'team thumb',
         title: 'Witch Sports Team',
     },
     {
-        imgUrlOne: 'assets/images/match/teamsm/teamsm-3.png',
+        imgUrlOne: 'match/teamsm/teamsm-3.png',
         imgAltOne: 'team thumb',
-        imgUrlTwo: 'assets/images/match/teamsm/teamsm-4.png',
+        imgUrlTwo: 'match/teamsm/teamsm-4.png',
         imgAltTwo: 'team thumb',
         title: 'Witch Sports Team',
     },
     {
-        imgUrlOne: 'assets/images/match/teamsm/teamsm-5.png',
+        imgUrlOne: 'match/teamsm/teamsm-5.png',
         imgAltOne: 'team thumb',
-        imgUrlTwo: 'assets/images/match/teamsm/teamsm-6.png',
+        imgUrlTwo: 'match/teamsm/teamsm-6.png',
         imgAltTwo: 'team thumb',
         title: 'Witch Sports Team',
     },
 ]
 
-class CollectionSectionTwo extends Component {
-    render() { 
-        return (
+function CollectionSectionTwo(){
+    return(
+        <div>
             <section className="collection-section padding-top padding-bottom">
                 <div className="container">
                     <div className="section-header">
@@ -57,7 +56,7 @@ class CollectionSectionTwo extends Component {
                                                         </Link>
                                                     </li>
                                                     <li className="text-center">
-                                                        <img className="w-75 w-md-100" src="assets/images/match/vs.png" alt="vs" />
+                                                        <img className="w-75 w-md-100" src="match/vs.png" alt="vs" />
                                                     </li>
                                                     <li className="match-team-thumb">
                                                         <Link to="/team-single">
@@ -84,8 +83,8 @@ class CollectionSectionTwo extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default CollectionSectionTwo;

@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 const title = "Recent Post";
@@ -6,35 +5,34 @@ const title = "Recent Post";
 
 let RecentPostList = [
     {
-        imgUrl: 'assets/images/blog/p-post/01.jpg',
+        imgUrl: 'blog/p-post/01.jpg',
         imgAlt: 'recent post thumb',
         title: 'Poor People’s Campaign Our Resources',
         pubDate: '15 May 2022',
     },
     {
-        imgUrl: 'assets/images/blog/p-post/02.jpg',
+        imgUrl: 'blog/p-post/02.jpg',
         imgAlt: 'recent post thumb',
         title: 'Boosting Social For NGO And Charities',
         pubDate: '15 May 2022',
     },
     {
-        imgUrl: 'assets/images/blog/p-post/03.jpg',
+        imgUrl: 'blog/p-post/03.jpg',
         imgAlt: 'recent post thumb',
         title: 'Poor People’s Campaign Our Resources',
         pubDate: '15 May 2022',
     },
     {
-        imgUrl: 'assets/images/blog/p-post/04.jpg',
+        imgUrl: 'blog/p-post/04.jpg',
         imgAlt: 'recent post thumb',
         title: 'Boosting Social For NGO And Charities',
         pubDate: '15 May 2022',
     },
 ]
 
-
-class RecentPost extends Component {
-    render() { 
-        return (
+function RecentPost(){
+    return(
+        <div>
             <div className="widget widget-post">
                 <div className="widget-header">
                     <h5>{title}</h5>
@@ -55,8 +53,8 @@ class RecentPost extends Component {
                     ))}
                 </ul>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default RecentPost;

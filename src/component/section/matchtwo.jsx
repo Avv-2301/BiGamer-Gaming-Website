@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from './socialmedia';
 
@@ -9,9 +8,9 @@ const btnText = "Browse All Matches";
 
 let MatchInfoListOne = [
     {
-        imageone: 'assets/images/match/teamsm/teamsm-1.png',
+        imageone: 'match/teamsm/teamsm-1.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-2.png',
+        imagetwo: 'match/teamsm/teamsm-2.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -23,9 +22,9 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-3.png',
+        imageone: 'match/teamsm/teamsm-3.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-4.png',
+        imagetwo: 'match/teamsm/teamsm-4.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -37,9 +36,9 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-5.png',
+        imageone: 'match/teamsm/teamsm-5.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-6.png',
+        imagetwo: 'match/teamsm/teamsm-6.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -51,9 +50,9 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-7.png',
+        imageone: 'match/teamsm/teamsm-7.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-8.png',
+        imagetwo: 'match/teamsm/teamsm-8.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -65,9 +64,9 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-9.png',
+        imageone: 'match/teamsm/teamsm-9.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-10.png',
+        imagetwo: 'match/teamsm/teamsm-10.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -80,10 +79,10 @@ let MatchInfoListOne = [
     },
 ]
 
-class MatchSectionTwo extends Component {
-    render() { 
-        return (
-            <section className="match-section padding-top padding-bottom" style={{backgroundImage: "url(/assets/images/match/bg-2.jpg)"}}>
+function MatchSectionTwo(){
+    return(
+        <div>
+            <section className="match-section padding-top padding-bottom" style={{backgroundImage: "url(/match/bg-2.jpg)"}}>
                 <div className="container">
                     <div className="section-header">
                         <p>{subtitle}</p>
@@ -108,7 +107,7 @@ class MatchSectionTwo extends Component {
                                                                     <Link to="/team-single"><img src={val.imageone} alt={val.alt1} /></Link>
                                                                 </li>
                                                                 <li className="text-center">
-                                                                    <img className="w-75 w-md-100" src="assets/images/match/vs.png" alt="vs" />
+                                                                    <img className="w-75 w-md-100" src="match/vs.png" alt="vs" />
                                                                 </li>
                                                                 <li className="match-team-thumb">
                                                                     <Link to="/team-single"><img src={val.imagetwo} alt={val.alt2} /></Link>
@@ -148,9 +147,9 @@ class MatchSectionTwo extends Component {
                         </div>
                     </div>
                 </div>
-            </section>
-        );
-    }
+            </section> 
+        </div>
+    );
 }
- 
+
 export default MatchSectionTwo;

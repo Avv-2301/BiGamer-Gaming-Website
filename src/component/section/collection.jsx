@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import Rating from "./rating";
 
@@ -10,31 +9,30 @@ const btnText = "Browse All games";
 
 let CollectionListContent = [
     {
-        imgUrl: 'assets/images/game/01.png',
+        imgUrl: 'game/red_dead.jpg',
         imgAlt: 'collect thumb',
-        title: 'Witch Sports Team',
+        title: 'Red Dead Redemption 2',
     },
     {
-        imgUrl: 'assets/images/game/02.png',
+        imgUrl: 'game/last_of_us.jpg',
         imgAlt: 'collect thumb',
-        title: 'Wolves Sports Team',
+        title: 'Last of us part 1',
     },
     {
-        imgUrl: 'assets/images/game/03.png',
+        imgUrl: 'game/need_for_speed.jpg',
         imgAlt: 'collect thumb',
-        title: 'Robot Team',
+        title: 'Need for Speed Unbound',
     },
     {
-        imgUrl: 'assets/images/game/04.png',
+        imgUrl: 'game/gta_5.jpg',
         imgAlt: 'collect thumb',
-        title: 'Dragon Pro',
+        title: 'Gta 5',
     },
 ]
 
-
-class CollectionSection extends Component {
-    render() { 
-        return (
+function CollectionSection(){
+    return(
+        <div>
             <section className="collection-section padding-top padding-bottom">
                 <div className="container">
                     <div className="section-header">
@@ -53,10 +51,10 @@ class CollectionSection extends Component {
                                                     alt={`${val.imgAlt}`} 
                                                 />
                                             </div>
-                                            <div className="game-overlay">
+                                            { <div className="game-overlay">
                                                 <h4><Link to="/team-single">{val.title}</Link> </h4>
                                                 <Rating />
-                                            </div>
+                                            </div> }
                                         </div>
                                     </div>
                                 </div>
@@ -68,8 +66,8 @@ class CollectionSection extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default CollectionSection;

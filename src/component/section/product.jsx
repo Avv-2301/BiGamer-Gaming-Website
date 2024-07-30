@@ -1,4 +1,3 @@
-import { Component } from "react";
 import Rating from "./rating";
 import { Link } from 'react-router-dom';
 
@@ -8,34 +7,34 @@ const title = "explore our products";
 
 let ProductListContent = [
     {
-        imgUrl: 'assets/images/product/01.jpg',
+        imgUrl: 'product/01.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'assets/images/product/02.jpg',
+        imgUrl: 'product/02.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'assets/images/product/03.jpg',
+        imgUrl: 'product/03.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'assets/images/product/04.jpg',
+        imgUrl: 'product/04.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
 ]
 
-class ProductSection extends Component {
-    render() { 
-        return (
+function ProductSection(){
+    return(
+        <div>
             <div className="product-section padding-top padding-bottom">
                 <div className="container">
                     <div className="section-header">
@@ -66,8 +65,8 @@ class ProductSection extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default ProductSection;

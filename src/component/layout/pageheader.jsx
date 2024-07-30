@@ -1,13 +1,14 @@
-import { Component } from "react";
 import { Link } from 'react-router-dom';
 
 
-class PageHeader extends Component {
-    render() { 
-        const {title} = this.props;
-        const {curPage} = this.props;
-        return (
-            <section className="pageheader-section" style={{backgroundImage: "url(/assets/images/pageheader/bg.jpg)"}}>
+function PageHeader(props){
+
+    const {title} = props;
+    const {curPage} = props;
+
+    return(
+        <div>
+            <section className="pageheader-section" style={{backgroundImage: "url(/pageheader/bg.jpg)"}}>
                 <div className="container">
                     <div className="section-wrapper text-center text-uppercase">
                         <h2 className="pageheader-title">{title}</h2>
@@ -20,8 +21,8 @@ class PageHeader extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default PageHeader;

@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -9,44 +8,42 @@ const btnText = "BECOME A PARTNER";
 
 let SponsorListContent = [
     {
-        imgUrl: 'assets/images/sponsor/01.png',
+        imgUrl: 'sponsor/01.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/02.png',
+        imgUrl: 'sponsor/02.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/03.png',
+        imgUrl: 'sponsor/03.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/04.png',
+        imgUrl: 'sponsor/04.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/05.png',
+        imgUrl: 'sponsor/05.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/06.png',
+        imgUrl: 'sponsor/06.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/07.png',
+        imgUrl: 'sponsor/07.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'assets/images/sponsor/08.png',
+        imgUrl: 'sponsor/08.png',
         imgAlt: 'Sponsor Thumb',
     },
 ]
 
-
-
-class SponsorSection extends Component {
-    render() { 
-        return (
+function SponsorSection(){
+    return(
+        <div>
             <div className="sponsor-section padding-top padding-bottom">
                 <div className="container">
                     <div className="section-header">
@@ -73,8 +70,8 @@ class SponsorSection extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default SponsorSection;

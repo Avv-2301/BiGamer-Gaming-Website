@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import Rating from "../section/rating";
 
@@ -7,35 +6,34 @@ const title = "Recent Product";
 
 let RecentProductList = [
     {
-        imgUrl: 'assets/images/shop/pp/01.jpg',
+        imgUrl: 'shop/pp/01.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'assets/images/shop/pp/02.jpg',
+        imgUrl: 'shop/pp/02.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'assets/images/shop/pp/03.jpg',
+        imgUrl: 'shop/pp/03.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'assets/images/shop/pp/04.jpg',
+        imgUrl: 'shop/pp/04.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
 ]
 
-
-class RecentProduct extends Component {
-    render() { 
-        return (
+function RecentProduct(){
+    return(
+        <div>
             <div className="widget widget-post recent-product">
                 <div className="widget-header">
                     <h5>{title}</h5>
@@ -55,8 +53,8 @@ class RecentProduct extends Component {
                     ))}
                 </ul>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default RecentProduct;

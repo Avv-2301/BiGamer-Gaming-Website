@@ -1,17 +1,16 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 let BannerListContent = [
     {
-        bgImgUrl: 'assets/images/banner/home-2/bg.jpg',
+        bgImgUrl: 'banner/home-2/bg.jpg',
         title: 'Online Game',
         subtitle: 'Genuine Money Transaction',
         desc: 'Assertively communicate an expanded array of mindshare rather than diverse technologies for magnetic applications eamlessly virtual then Conveniently monetize synergistic human capital',
         btnText: 'join us today',
     },
     {
-        bgImgUrl: 'assets/images/banner/home-2/bg-2.jpg',
+        bgImgUrl: 'banner/home-2/bg-2.jpg',
         title: 'Online Game',
         subtitle: 'Genuine Money Transaction',
         desc: 'Assertively communicate an expanded array of mindshare rather than diverse technologies for magnetic applications eamlessly virtual then Conveniently monetize synergistic human capital',
@@ -19,9 +18,9 @@ let BannerListContent = [
     },
 ]
 
-class BannerTwo extends Component {
-    render() { 
-        return (
+function BannerTwo(){
+    return(
+        <div>
             <div className="banner__slider overflow-hidden">
                 <Swiper
                     spaceBetween={30}
@@ -48,8 +47,8 @@ class BannerTwo extends Component {
                     ))}
                 </Swiper>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default BannerTwo;

@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,40 +9,40 @@ const title = "Meet Our Squad Players ";
 
 let PlayerListContent = [
     {
-        bgImgUrl: 'assets/images/team/1.jpg',
-        imgUrl: 'assets/images/team/1.png',
+        bgImgUrl: 'team/1.jpg',
+        imgUrl: 'team/1.png',
         imgAlt: 'Player Thumb',
         title: 'Dragon Team',
     },
     {
-        bgImgUrl: 'assets/images/team/2.jpg',
-        imgUrl: 'assets/images/team/2.png',
+        bgImgUrl: 'team/2.jpg',
+        imgUrl: 'team/2.png',
         imgAlt: 'Player Thumb',
         title: 'Frogs Team',
     },
     {
-        bgImgUrl: 'assets/images/team/3.jpg',
-        imgUrl: 'assets/images/team/3.png',
+        bgImgUrl: 'team/3.jpg',
+        imgUrl: 'team/3.png',
         imgAlt: 'Player Thumb',
         title: 'Tigers Team',
     },
     {
-        bgImgUrl: 'assets/images/team/4.jpg',
-        imgUrl: 'assets/images/team/4.png',
+        bgImgUrl: 'team/4.jpg',
+        imgUrl: 'team/4.png',
         imgAlt: 'Player Thumb',
         title: 'Shark Team',
     },
     {
-        bgImgUrl: 'assets/images/team/5.jpg',
-        imgUrl: 'assets/images/team/5.png',
+        bgImgUrl: 'team/5.jpg',
+        imgUrl: 'team/5.png',
         imgAlt: 'Player Thumb',
         title: 'Gaming Team',
     },
 ]
 
-class PlayerSection extends Component {
-    render() { 
-        return (
+function PlayerSection(){
+    return (
+        <div>
             <section className="player-section padding-top padding-bottom">
                 <div className="container-fluid">
                     <div className="section-header">
@@ -100,8 +99,8 @@ class PlayerSection extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default PlayerSection;

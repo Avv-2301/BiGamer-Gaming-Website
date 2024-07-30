@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Rating from "./rating";
@@ -8,9 +7,9 @@ const title = "Our Most Popular testimonial posts";
 
 let TestimonialListContent = [
     {
-        imgUrl: 'assets/images/testimonial/01.jpg',
+        imgUrl: 'testimonial/01.jpg',
         imgAlt: 'testimonial thumb',
-        imgIconUrl: 'assets/images/testimonial/logo/01.png',
+        imgIconUrl: 'testimonial/logo/01.png',
         imgIconAlt: 'testimonial thumb',
         title: 'Somrat Islam',
         desc: 'Edgeing nterfaces fnergstca plagiarize teams anbudng paradgms rapidiousl buildcaboration anden deassharing viaing and bleeding whereas goingi forward process and monetze',
@@ -18,9 +17,9 @@ let TestimonialListContent = [
         ratingcount: '5.28',
     },
     {
-        imgUrl: 'assets/images/testimonial/02.jpg',
+        imgUrl: 'testimonial/02.jpg',
         imgAlt: 'testimonial thumb',
-        imgIconUrl: 'assets/images/testimonial/logo/02.png',
+        imgIconUrl: 'testimonial/logo/02.png',
         imgIconAlt: 'testimonial thumb',
         title: 'Rajib Raj',
         desc: 'Edgeing nterfaces fnergstca plagiarize teams anbudng paradgms rapidiousl buildcaboration anden deassharing viaing and bleeding whereas goingi forward process and monetze',
@@ -29,9 +28,9 @@ let TestimonialListContent = [
     },
 ]
 
-class TestimonialSection extends Component {
-    render() { 
-        return (
+function TestimonialSection(){
+    return(
+        <div>
             <div className="testimonial-section padding-top padding-bottom" style={{backgroundImage: "url(/assets/images/testimonial/bg.png)"}}>
                 <div className="container">
                     <div className="section-header">
@@ -96,8 +95,8 @@ class TestimonialSection extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default TestimonialSection;

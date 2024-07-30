@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 
 const subtitle = "who we are";
 const title = "we are professional team esport";
@@ -8,38 +6,37 @@ const desc = "Distinctively provide acces mutfuncto users whereas transparent pr
 
 let AboutListContent = [
     {
-        imgUrl: 'assets/images/about/icon-1.png',
+        imgUrl: 'about/icon-1.png',
         imgAlt: 'About Icon',
         title: '103k Community Earning',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
     },
     {
-        imgUrl: 'assets/images/about/icon-2.png',
+        imgUrl: 'about/icon-2.png',
         imgAlt: 'About Icon',
         title: '34m+ Registered Players',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
     },
     {
-        imgUrl: 'assets/images/about/icon-3.png',
+        imgUrl: 'about/icon-3.png',
         imgAlt: 'About Icon',
         title: '240k Streams Complete',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
     },
 ]
 
+function AboutSection(props){
 
-
-class AboutSection extends Component {
-    render() { 
-        const {imgUrl} = this.props;
-        return (
+   
+    return(
+        <div>
             <section className="about-section">
                 <div className="container">
                     <div className="section-wrapper padding-top">
                         <div className="row">
                             <div className="col-lg-6">
                                 <div className="about-image">
-                                    <img src={imgUrl} alt="about-image" />
+                                    <img src={props.imgUrl} alt="about-image" />
                                 </div>
                             </div>
                             <div className="col-lg-6 col-md-10">
@@ -73,8 +70,8 @@ class AboutSection extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default AboutSection;

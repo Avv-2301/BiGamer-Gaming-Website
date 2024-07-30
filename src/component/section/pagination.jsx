@@ -1,8 +1,6 @@
-import { Component } from "react";
-
-class Pagination extends Component {
-    render() { 
-        return (
+function Pagination(){
+    return(
+        <div>
             <ul className="default-pagination lab-ul">
                 <li>
                     <a href="#"><i className="icofont-rounded-left"></i></a>
@@ -20,8 +18,8 @@ class Pagination extends Component {
                     <a href="#"><i className="icofont-rounded-right"></i></a>
                 </li>
             </ul>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default Pagination;

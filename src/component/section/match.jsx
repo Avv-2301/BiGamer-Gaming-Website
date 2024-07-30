@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from "./socialmedia";
 
@@ -10,9 +9,9 @@ const Previoutitle = "Previous Matches";
 
 let MatchInfoListOne = [
     {
-        imageone: 'assets/images/match/teamsm/teamsm-1.png',
+        imageone: 'match/teamsm/teamsm-1.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-2.png',
+        imagetwo: 'match/teamsm/teamsm-2.png',
         alt2: 'game list name',
         title: 'Battlefield-4 tournament',
         matchdate: '30  April 2021',
@@ -26,9 +25,9 @@ let MatchInfoListOne = [
 ]
 let MatchInfoListTwo = [
     {
-        imageone: 'assets/images/match/teamsm/teamsm-1.png',
+        imageone: 'match/teamsm/teamsm-1.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-2.png',
+        imagetwo: 'match/teamsm/teamsm-2.png',
         alt2: 'game list name',
         title: 'call of duty TOURNAMENT',
         matchdate: '15  May 2022',
@@ -39,9 +38,9 @@ let MatchInfoListTwo = [
         matchpamount: '$3200',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-3.png',
+        imageone: 'match/teamsm/teamsm-3.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-4.png',
+        imagetwo: 'match/teamsm/teamsm-4.png',
         alt2: 'game list name',
         title: 'LEAGUE BATTLE tournament',
         matchdate: '15  May 2022',
@@ -52,9 +51,9 @@ let MatchInfoListTwo = [
         matchpamount: '$3600',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-5.png',
+        imageone: 'match/teamsm/teamsm-5.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-6.png',
+        imagetwo: 'match/teamsm/teamsm-6.png',
         alt2: 'game list name',
         title: 'pubg classic tournament',
         matchdate: '15  May 2022',
@@ -68,9 +67,9 @@ let MatchInfoListTwo = [
 
 let MatchInfoListThree = [
     {
-        imageone: 'assets/images/match/teamsm/teamsm-7.png',
+        imageone: 'match/teamsm/teamsm-7.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-8.png',
+        imagetwo: 'match/teamsm/teamsm-8.png',
         alt2: 'game list name',
         result: '4 - 2',
         matchdate: '15  May 2022',
@@ -81,9 +80,9 @@ let MatchInfoListThree = [
         matchpamount: '$3200',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-9.png',
+        imageone: 'match/teamsm/teamsm-9.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-10.png',
+        imagetwo: 'match/teamsm/teamsm-10.png',
         alt2: 'game list name',
         result: '3 - 1',
         matchdate: '15  May 2022',
@@ -94,9 +93,9 @@ let MatchInfoListThree = [
         matchpamount: '$3600',
     },
     {
-        imageone: 'assets/images/match/teamsm/teamsm-11.png',
+        imageone: 'match/teamsm/teamsm-11.png',
         alt1: 'game list name',
-        imagetwo: 'assets/images/match/teamsm/teamsm-12.png',
+        imagetwo: 'match/teamsm/teamsm-12.png',
         alt2: 'game list name',
         result: '0 - 0',
         matchdate: '15  May 2022',
@@ -108,11 +107,9 @@ let MatchInfoListThree = [
     },
 ]
 
-
-class MatchSection extends Component {
-    render() { 
-        return (
-            <section className="match-section padding-top padding-bottom" style= {{backgroundImage: "url(/assets/images/match/bg.jpg)"}}>
+function MatchSection(){
+    return(
+        <section className="match-section padding-top padding-bottom" style= {{backgroundImage: "url(/match/bg.jpg)"}}>
                 <div className="container">
                     <div className="section-header">
                         <p>{subtitle}</p>
@@ -137,7 +134,7 @@ class MatchSection extends Component {
                                                                     <a href="/team-single"><img src={val.imageone} alt={val.alt1} /></a>
                                                                 </li>
                                                                 <li className="text-center">
-                                                                    <img className="w-75 w-md-100" src="assets/images/match/vs.png" alt="vs" />
+                                                                    <img className="w-75 w-md-100" src="match/vs.png" alt="vs" />
                                                                 </li>
                                                                 <li className="match-team-thumb">
                                                                     <a href="/team-single"><img src={val.imagetwo} alt={val.alt2} /></a>
@@ -193,7 +190,7 @@ class MatchSection extends Component {
                                                                     </div>
                                                                 </div>
                                                                 <div className="col-2 d-md-none">
-                                                                    <img src="assets/images/match/vs.png" alt="vs" />
+                                                                    <img src="match/vs.png" alt="vs" />
                                                                 </div>
                                                                 <div className="col-md-2 col-5 order-md-3 p-0">
                                                                     <div className="match-team-thumb text-center">
@@ -246,7 +243,7 @@ class MatchSection extends Component {
 
                                                                 </div>
                                                                 <div className="col-2 d-md-none">
-                                                                    <img src="assets/images/match/vs.png" alt="vs" />
+                                                                    <img src="match/vs.png" alt="vs" />
                                                                 </div>
                                                                 <div className="col-md-2 col-5 order-md-3 p-0">
                                                                     <div className="match-team-thumb text-center">
@@ -284,8 +281,7 @@ class MatchSection extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+    );
 }
- 
+
 export default MatchSection;

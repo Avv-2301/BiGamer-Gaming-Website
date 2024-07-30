@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 const subtitle = "our recent news";
@@ -6,7 +5,7 @@ const title = "Our Most Popular Blog posts";
 
 let BlogListContent = [
     {
-        imgUrl: 'assets/images/blog/01.jpg',
+        imgUrl: 'blog/01.jpg',
         imgAlt: 'Blog Thumb',
         title: 'Distinctive redefine resource maximizing for',
         desc: 'Uniquely conceptuaze visionary process ariwith tactical ramatica centered qualitys vectoris with outofthebox scenario is ompelling uthoritatively generate front-end niches after one',
@@ -15,7 +14,7 @@ let BlogListContent = [
         btnText: 'read more',
     },
     {
-        imgUrl: 'assets/images/blog/02.jpg',
+        imgUrl: 'blog/02.jpg',
         imgAlt: 'Blog Thumb',
         title: 'redefine resource maximizing for Distinctive',
         desc: 'Uniquely conceptuaze visionary process ariwith tactical ramatica centered qualitys vectoris with outofthebox scenario is ompelling uthoritatively generate front-end niches after one',
@@ -25,10 +24,10 @@ let BlogListContent = [
     },
 ]
 
-class BlogSection extends Component {
-    render() { 
-        return (
-            <div className="blog-section padding-top padding-bottom" style={{backgroundImage: "url(/assets/images/blog/bg.jpg)"}}>
+function BlogSection(){
+    return(
+        <div>
+            <div className="blog-section padding-top padding-bottom" style={{backgroundImage: "url(/blog/bg.jpg)"}}>
                 <div className="container">
                     <div className="section-header">
                         <p>{subtitle}</p>
@@ -65,8 +64,8 @@ class BlogSection extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default BlogSection;

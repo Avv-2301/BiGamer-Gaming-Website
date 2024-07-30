@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 const title = "Our Archive";
 
 let ArchiveList = [
@@ -29,10 +27,10 @@ let ArchiveList = [
     },
 ]
 
-class Archive extends Component {
-    render() { 
-        return (
-            <div className="widget widget-archive">
+function Archive(){
+    return(
+        <div>
+             <div className="widget widget-archive">
                 <div className="widget-header">
                     <h5>{title}</h5>
                 </div>
@@ -44,8 +42,8 @@ class Archive extends Component {
                     ))}
                 </ul>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default Archive;

@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 import SocialMedia from "./socialmedia";
 
@@ -7,47 +6,46 @@ const title = "Meet Our Squad Players";
 
 let PlayerListContent = [
     {
-        bgImgUrl: 'assets/images/team/home-2/1.jpg',
-        imgUrl: 'assets/images/team/1.png',
+        bgImgUrl: 'team/home-2/1.jpg',
+        imgUrl: 'team/1.png',
         imgAlt: 'Player Thumb',
         title: 'Dragon Team',
     },
     {
-        bgImgUrl: 'assets/images/team/home-2/2.jpg',
-        imgUrl: 'assets/images/team/2.png',
+        bgImgUrl: 'team/home-2/2.jpg',
+        imgUrl: 'team/2.png',
         imgAlt: 'Player Thumb',
         title: 'Frogs Team',
     },
     {
-        bgImgUrl: 'assets/images/team/home-2/3.jpg',
-        imgUrl: 'assets/images/team/3.png',
+        bgImgUrl: 'team/home-2/3.jpg',
+        imgUrl: 'team/3.png',
         imgAlt: 'Player Thumb',
         title: 'Tigers Team',
     },
     {
-        bgImgUrl: 'assets/images/team/home-2/4.jpg',
-        imgUrl: 'assets/images/team/4.png',
+        bgImgUrl: 'team/home-2/4.jpg',
+        imgUrl: 'team/4.png',
         imgAlt: 'Player Thumb',
         title: 'Shark Team',
     },
     {
-        bgImgUrl: 'assets/images/team/home-2/5.jpg',
-        imgUrl: 'assets/images/team/5.png',
+        bgImgUrl: 'team/home-2/5.jpg',
+        imgUrl: 'team/5.png',
         imgAlt: 'Player Thumb',
         title: 'Gaming Team',
     },
     {
-        bgImgUrl: 'assets/images/team/home-2/1.jpg',
-        imgUrl: 'assets/images/team/1.png',
+        bgImgUrl: 'team/home-2/1.jpg',
+        imgUrl: 'team/1.png',
         imgAlt: 'Player Thumb',
         title: 'Dragon Team',
     },
 ]
 
-
-class PlayerSectionTwo extends Component {
-    render() { 
-        return (
+function PlayerSectionTwo(){
+    return(
+        <div>
             <section className="player-section padding-top padding-bottom">
                 <div className="container">
                     <div className="section-header">
@@ -79,8 +77,8 @@ class PlayerSectionTwo extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default PlayerSectionTwo;

@@ -1,4 +1,3 @@
-import { Component } from "react";
 
 const Name = "Rajib Ahmed";
 const desc = "Competently conceptualize alternative synergy and technically and niche markets. Efficiently impact technically sound outsourcing rath tnclicks-and-mortar best practices.";
@@ -26,13 +25,12 @@ let AuthorSocialList = [
     },
 ]
 
-
-class Author extends Component {
-    render() { 
-        return (
+function Author(){
+    return(
+        <div>
             <div className="authors">
                 <div className="author-thumb">
-                    <img src="assets/images/blog/author/01.jpg" alt="author" />
+                    <img src="blog/author/01.jpg" alt="author" />
                 </div>
                 <div className="author-content">
                     <h6>{Name}</h6>
@@ -44,8 +42,8 @@ class Author extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default Author;

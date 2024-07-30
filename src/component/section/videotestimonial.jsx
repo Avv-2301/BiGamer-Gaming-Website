@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +10,7 @@ const title = "check our live streaming";
 
 let VideoListContentTop = [
     {
-        imgUrl: 'assets/images/video/06.jpg',
+        imgUrl: 'video/06.jpg',
         imgAlt: 'Video Thum',
         videoLink: 'https://www.youtube.com/embed/g5eQgEuiFC8',
     },
@@ -19,9 +18,9 @@ let VideoListContentTop = [
 
 let TestimonialListContent = [
     {
-        imgUrl: 'assets/images/testimonial/01.jpg',
+        imgUrl: 'testimonial/01.jpg',
         imgAlt: 'testimonial thumb',
-        imgIconUrl: 'assets/images/testimonial/logo/01.png',
+        imgIconUrl: 'testimonial/logo/01.png',
         imgIconAlt: 'testimonial thumb',
         title: 'Somrat Islam',
         desc: 'Edgeing nterfaces fnergstca plagiarize teams anbudng paradgms rapidiousl buildcaboration anden deassharing viaing and bleeding whereas goingi forward process and monetze',
@@ -29,9 +28,9 @@ let TestimonialListContent = [
         ratingcount: '5.28',
     },
     {
-        imgUrl: 'assets/images/testimonial/02.jpg',
+        imgUrl: 'testimonial/02.jpg',
         imgAlt: 'testimonial thumb',
-        imgIconUrl: 'assets/images/testimonial/logo/02.png',
+        imgIconUrl: 'testimonial/logo/02.png',
         imgIconAlt: 'testimonial thumb',
         title: 'Rajib Raj',
         desc: 'Edgeing nterfaces fnergstca plagiarize teams anbudng paradgms rapidiousl buildcaboration anden deassharing viaing and bleeding whereas goingi forward process and monetze',
@@ -40,11 +39,9 @@ let TestimonialListContent = [
     },
 ]
 
-
-class VideoTestimonial extends Component {
-    render() { 
-        return (
-            <div className="video-section padding-top padding-bottom" style={{backgroundImage: "url(/assets/images/video/bg.jpg)"}}>
+function VideoTestimonial(){
+    return(
+        <div className="video-section padding-top padding-bottom" style={{backgroundImage: "url(/assets/images/video/bg.jpg)"}}>
                 <div className="container">
                     <div className="section-header">
                         <p>{subtitle}</p>
@@ -137,8 +134,7 @@ class VideoTestimonial extends Component {
                     </div>
                 </div>
             </div>
-        );
-    }
+    );
 }
- 
+
 export default VideoTestimonial;

@@ -1,19 +1,9 @@
-import { Component } from "react";
 
 const title = "Leave a Comment";
 
-class CommentForm extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            respondName: '',
-            respondEmail: '',
-            respondSubject: '',
-            respondMassage: '',
-        };
-    }
-    render() { 
-        return (
+function CommentForm(){
+    return(
+        <div>
             <div id="respond" className="comment-respond">
                 <h6 className="h7">{title}</h6>
                 <div className="add-comment">
@@ -22,7 +12,7 @@ class CommentForm extends Component {
                             type="text"
                             name="name"
                             id="item01"
-                            value={this.state.respondName}
+                            // value={this.state.respondName}
                             onChange={(e)=>{this.setState({respondName: e.target.value});}}
                             placeholder="Your Name *"
                         />
@@ -30,7 +20,7 @@ class CommentForm extends Component {
                             type="text"
                             name="email"
                             id="item02"
-                            value={this.state.respondEmail}
+                            // value={this.state.respondEmail}
                             onChange={(e)=>{this.setState({respondEmail: e.target.value});}}
                             placeholder="Your email *" 
                         />
@@ -39,7 +29,7 @@ class CommentForm extends Component {
                             name="subject"
                             id="item03"
                             className="w-100"
-                            value={this.state.respondSubject}
+                            // value={this.state.respondSubject}
                             onChange={(e)=>{this.setState({respondSubject: e.target.value});}}
                             placeholder="Write a Subject"
                         />
@@ -48,7 +38,7 @@ class CommentForm extends Component {
                             type="text"
                             id="item04"
                             name="message"
-                            value={this.state.respondMassage}
+                            // value={this.state.respondMassage}
                             onChange={(e)=>{this.setState({respondMassage: e.target.value});}}
                             placeholder="Your Message"
                         ></textarea>
@@ -56,8 +46,8 @@ class CommentForm extends Component {
                     </form>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default CommentForm;

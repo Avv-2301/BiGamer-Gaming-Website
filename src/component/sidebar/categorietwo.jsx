@@ -1,4 +1,3 @@
-import { Component } from "react";
 
 const title = "Post Categories";
 
@@ -29,10 +28,9 @@ let CategorieList = [
     },
 ]
 
-
-class CategorieTwo extends Component {
-    render() { 
-        return (
+function CategorieTwo(){
+    return(
+        <div>
             <div className="widget widget-category">
                 <div className="widget-header">
                     <h5>{title}</h5>
@@ -45,8 +43,8 @@ class CategorieTwo extends Component {
                     ))}
                 </ul>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default CategorieTwo;

@@ -1,11 +1,8 @@
-import { Component } from "react";
-
 const title = "All Categories";
 
-
-class Categorie extends Component {
-    render() { 
-        return (
+function Categorie(){
+    return(
+        <div>
             <div className="widget shop-widget">
                 <div className="widget-header">
                     <h5>{title}</h5>
@@ -84,8 +81,8 @@ class Categorie extends Component {
                     </ul>
                 </div>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default Categorie;

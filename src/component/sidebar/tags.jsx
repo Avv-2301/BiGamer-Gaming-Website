@@ -1,5 +1,3 @@
-import { Component } from "react";
-
 const title = "Our Popular tags";
 
 let TagsList = [
@@ -41,9 +39,9 @@ let TagsList = [
     },
 ]
 
-class Tags extends Component {
-    render() { 
-        return (
+function Tags(){
+    return(
+        <div>
             <div className="widget widget-tags">
                 <div className="widget-header">
                     <h5>{title}</h5>
@@ -54,8 +52,8 @@ class Tags extends Component {
                     ))}
                 </ul>
             </div>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default Tags;

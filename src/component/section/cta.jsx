@@ -1,4 +1,3 @@
-import { Component } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -10,12 +9,11 @@ const desc = 'Distinctively provide acces mutfuncto users whereas transparent pr
 
 const btnText = 'Join Community';
 
+function CtaSection(props){
 
 
-class CtaSection extends Component {
-    render() { 
-        const {imgUrl} = this.props;
-        return (
+    return(
+        <div>
             <section className="cta-section padding-bottom">
                 <div className="container">
                     <div className="cta-wrapper item-layer">
@@ -31,7 +29,7 @@ class CtaSection extends Component {
                                 </div>
                                 <div className="col-lg-6">
                                     <div className="cta-thumb text-end">
-                                        <img src={imgUrl} alt="gamer-img" />
+                                        <img src={props.imgUrl} alt="gamer-img" />
                                     </div>
                                 </div>
                             </div>
@@ -39,8 +37,8 @@ class CtaSection extends Component {
                     </div>
                 </div>
             </section>
-        );
-    }
+        </div>
+    )
 }
- 
+
 export default CtaSection;

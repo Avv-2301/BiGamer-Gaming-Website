@@ -1,4 +1,4 @@
-import { Component, Fragment } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../component/layout/footer";
 import Header from "../component/layout/header";
@@ -81,94 +81,103 @@ let ProductList = [
 ]
 
 
-class ShopPage extends Component {
-    GridView() {
-        document.querySelector('.shop-product-wrap').classList.add('grid')
-        document.querySelector('.shop-product-wrap').classList.remove('list')
-        document.querySelector('.product-view-mode').classList.add('gridActive')
-        document.querySelector('.product-view-mode').classList.remove('listActive')
-    }
-    ListView() {
-        document.querySelector('.shop-product-wrap').classList.add('list')
-        document.querySelector('.shop-product-wrap').classList.remove('grid')
-        document.querySelector('.product-view-mode').classList.add('listActive')
-        document.querySelector('.product-view-mode').classList.remove('gridActive')
-    }
-    render() {
-        return (
-            <Fragment>
-                <Header />
-                <PageHeader title={'SHOP PAGE'} curPage={'Shop'} />
-                <div className="shop-page padding-top padding-bottom aside-bg">
-                    <div className="container">
-                        <div className="row justify-content-center pb-15">
-                            <div className="col-lg-8 col-12">
-                                <article>
-                                    <div className="shop-title d-flex flex-wrap justify-content-between">
-                                        <p>{showResult}</p>
-                                        <div className="product-view-mode gridActive">
-                                            <a className="grid" onClick={this.GridView}><i className="icofont-ghost"></i></a>
-                                            <a className="list" onClick={this.ListView}><i className="icofont-listine-dots"></i></a>
-                                        </div>
+const ShopPage = () => {
+    const [viewMode, setViewMode] = useState('grid');
+
+    const GridView = () => {
+        setViewMode('grid');
+    };
+
+    const ListView = () => {
+        setViewMode('list');
+    };
+
+    const showResult = "Showing results"; // Replace this with actual data or prop
+    const ProductList = [ // Example data, replace with actual product data
+        {
+            imgUrl: "path/to/image.jpg",
+            imgAlt: "Product Image",
+            title: "Product Title",
+            price: "$99.99",
+            desc: "Product Description",
+        },
+        // Add more products as needed
+    ];
+
+    return (
+        <Fragment>
+            <Header />
+            <PageHeader title={'SHOP PAGE'} curPage={'Shop'} />
+            <div className="shop-page padding-top padding-bottom aside-bg">
+                <div className="container">
+                    <div className="row justify-content-center pb-15">
+                        <div className="col-lg-8 col-12">
+                            <article>
+                                <div className="shop-title d-flex flex-wrap justify-content-between">
+                                    <p>{showResult}</p>
+                                    <div className={`product-view-mode ${viewMode === 'grid' ? 'gridActive' : 'listActive'}`}>
+                                        <a className="grid" onClick={GridView}><i className="icofont-ghost"></i></a>
+                                        <a className="list" onClick={ListView}><i className="icofont-listine-dots"></i></a>
                                     </div>
-                                    <div className="shop-product-wrap grid row justify-content-center g-4">
-                                        {ProductList.map((val, i) => (
-                                            <div className="col-lg-4 col-md-6 col-12" key={i}>
-                                                <div className="product-item">
-                                                    <div className="product-thumb">
-                                                        <div className="pro-thumb">
-                                                            <img src={`${val.imgUrl}`} alt={`${val.imgAlt}`} />
-                                                        </div>
-                                                        <div className="product-action-link">
-                                                            <a href="#"><i className="icofont-eye"></i></a>
-                                                            <a href="#"><i className="icofont-heart"></i></a>
-                                                            <a href="#"><i className="icofont-cart-alt"></i></a>
-                                                        </div>
+                                </div>
+                                <div className={`shop-product-wrap ${viewMode} row justify-content-center g-4`}>
+                                    {ProductList.map((val, i) => (
+                                        <div className="col-lg-4 col-md-6 col-12" key={i}>
+                                            <div className="product-item">
+                                                <div className="product-thumb">
+                                                    <div className="pro-thumb">
+                                                        <img src={`${val.imgUrl}`} alt={`${val.imgAlt}`} />
                                                     </div>
-                                                    <div className="product-content">
-                                                        <h5><Link to="/shop-single">{val.title}</Link></h5>
-                                                        <div className="productRating"><Rating /></div>
-                                                        <h6>{val.price}</h6>
+                                                    <div className="product-action-link">
+                                                        <a href="#"><i className="icofont-eye"></i></a>
+                                                        <a href="#"><i className="icofont-heart"></i></a>
+                                                        <a href="#"><i className="icofont-cart-alt"></i></a>
                                                     </div>
                                                 </div>
-                                                <div className="product-list-item">
-                                                    <div className="product-thumb">
-                                                        <div className="pro-thumb">
-                                                            <img src={`${val.imgUrl}`} alt={`${val.imgAlt}`} />
-                                                        </div>
-                                                        <div className="product-action-link">
-                                                            <a href="#"><i className="icofont-eye"></i></a>
-                                                            <a href="#"><i className="icofont-heart"></i></a>
-                                                            <a href="#"><i className="icofont-cart-alt"></i></a>
-                                                        </div>
-                                                    </div>
-                                                    <div className="product-content">
-                                                        <h5><a href="#">{val.title}</a></h5>
-                                                        <div className="productRating"><Rating /></div>
-                                                        <h6>{val.price}</h6>
-                                                        <p>{val.desc}</p>
-                                                    </div>
+                                                <div className="product-content">
+                                                    <h5><Link to="/shop-single">{val.title}</Link></h5>
+                                                    <div className="productRating"><Rating /></div>
+                                                    <h6>{val.price}</h6>
                                                 </div>
                                             </div>
-                                        ))}
-                                    </div>
-                                    <Pagination />
-                                </article>
-                            </div>
-                            <div className="col-lg-4 col-md-7 col-12">
-                                <aside className="ps-lg-4">
-                                    <SearchBar />
-                                    <Categorie />
-                                    <RecentProduct />
-                                </aside>
-                            </div>
+                                            <div className={`product-list-item ${viewMode === 'list' ? 'd-block' : 'd-none'}`}>
+                                                <div className="product-thumb">
+                                                    <div className="pro-thumb">
+                                                        <img src={`${val.imgUrl}`} alt={`${val.imgAlt}`} />
+                                                    </div>
+                                                    <div className="product-action-link">
+                                                        <a href="#"><i className="icofont-eye"></i></a>
+                                                        <a href="#"><i className="icofont-heart"></i></a>
+                                                        <a href="#"><i className="icofont-cart-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div className="product-content">
+                                                    <h5><a href="#">{val.title}</a></h5>
+                                                    <div className="productRating"><Rating /></div>
+                                                    <h6>{val.price}</h6>
+                                                    <p>{val.desc}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                                <Pagination />
+                            </article>
+                        </div>
+                        <div className="col-lg-4 col-md-7 col-12">
+                            <aside className="ps-lg-4">
+                                <SearchBar />
+                                <Categorie />
+                                <RecentProduct />
+                            </aside>
                         </div>
                     </div>
                 </div>
-                <Footer />
-            </Fragment>
-        );
-    }
+            </div>
+            <Footer />
+        </Fragment>
+    );
 }
- 
+
 export default ShopPage;
+

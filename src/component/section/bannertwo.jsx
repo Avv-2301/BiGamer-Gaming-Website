@@ -3,14 +3,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 let BannerListContent = [
     {
-        bgImgUrl: 'banner/home-2/bg.jpg',
+        bgImgUrl: '../../assets/images/banner/home-2/bg.jpg',
         title: 'Online Game',
         subtitle: 'Genuine Money Transaction',
         desc: 'Assertively communicate an expanded array of mindshare rather than diverse technologies for magnetic applications eamlessly virtual then Conveniently monetize synergistic human capital',
         btnText: 'join us today',
     },
     {
-        bgImgUrl: 'banner/home-2/bg-2.jpg',
+        bgImgUrl: '../../assets/images/banner/home-2/bg-2.jpg',
         title: 'Online Game',
         subtitle: 'Genuine Money Transaction',
         desc: 'Assertively communicate an expanded array of mindshare rather than diverse technologies for magnetic applications eamlessly virtual then Conveniently monetize synergistic human capital',

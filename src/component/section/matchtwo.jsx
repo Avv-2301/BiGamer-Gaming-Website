@@ -8,7 +8,7 @@ const btnText = "Browse All Matches";
 
 let MatchInfoListOne = [
     {
-        imageone: 'match/teamsm/teamsm-1.png',
+        imageone: '../../assets/images/match/teamsm/teamsm-1.png',
         alt1: 'game list name',
         imagetwo: 'match/teamsm/teamsm-2.png',
         alt2: 'game list name',
@@ -22,7 +22,7 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'match/teamsm/teamsm-3.png',
+        imageone: '../../assets/images/match/teamsm/teamsm-3.png',
         alt1: 'game list name',
         imagetwo: 'match/teamsm/teamsm-4.png',
         alt2: 'game list name',
@@ -36,7 +36,7 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'match/teamsm/teamsm-5.png',
+        imageone: '../../assets/images/match/teamsm/teamsm-5.png',
         alt1: 'game list name',
         imagetwo: 'match/teamsm/teamsm-6.png',
         alt2: 'game list name',
@@ -50,7 +50,7 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'match/teamsm/teamsm-7.png',
+        imageone: '../../assets/images/match/teamsm/teamsm-7.png',
         alt1: 'game list name',
         imagetwo: 'match/teamsm/teamsm-8.png',
         alt2: 'game list name',
@@ -64,7 +64,7 @@ let MatchInfoListOne = [
         btntextTwo: 'Watch Now',
     },
     {
-        imageone: 'match/teamsm/teamsm-9.png',
+        imageone: '../../assets/images/match/teamsm/teamsm-9.png',
         alt1: 'game list name',
         imagetwo: 'match/teamsm/teamsm-10.png',
         alt2: 'game list name',

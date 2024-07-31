@@ -6,37 +6,37 @@ const title = "Meet Our Squad Players";
 
 let PlayerListContent = [
     {
-        bgImgUrl: 'team/home-2/1.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/1.jpg',
         imgUrl: 'team/1.png',
         imgAlt: 'Player Thumb',
         title: 'Dragon Team',
     },
     {
-        bgImgUrl: 'team/home-2/2.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/2.jpg',
         imgUrl: 'team/2.png',
         imgAlt: 'Player Thumb',
         title: 'Frogs Team',
     },
     {
-        bgImgUrl: 'team/home-2/3.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/3.jpg',
         imgUrl: 'team/3.png',
         imgAlt: 'Player Thumb',
         title: 'Tigers Team',
     },
     {
-        bgImgUrl: 'team/home-2/4.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/4.jpg',
         imgUrl: 'team/4.png',
         imgAlt: 'Player Thumb',
         title: 'Shark Team',
     },
     {
-        bgImgUrl: 'team/home-2/5.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/5.jpg',
         imgUrl: 'team/5.png',
         imgAlt: 'Player Thumb',
         title: 'Gaming Team',
     },
     {
-        bgImgUrl: 'team/home-2/1.jpg',
+        bgImgUrl: '../../assets/images/team/home-2/1.jpg',
         imgUrl: 'team/1.png',
         imgAlt: 'Player Thumb',
         title: 'Dragon Team',

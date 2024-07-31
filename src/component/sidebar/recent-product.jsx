@@ -6,25 +6,25 @@ const title = "Recent Product";
 
 let RecentProductList = [
     {
-        imgUrl: 'shop/pp/01.jpg',
+        imgUrl: '../../assets/images/shop/pp/01.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'shop/pp/02.jpg',
+        imgUrl: '../../assets/images/shop/pp/02.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'shop/pp/03.jpg',
+        imgUrl: '../../assets/images/shop/pp/03.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',
     },
     {
-        imgUrl: 'shop/pp/04.jpg',
+        imgUrl: '../../assets/images/shop/pp/04.jpg',
         imgAlt: 'product thumb',
         title: 'PRODUCT TITLE HERE',
         price: '$200',

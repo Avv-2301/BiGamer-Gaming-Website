@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../component/layout/footer";
 import Header from "../component/layout/header";
@@ -16,63 +16,63 @@ const showResult = "Showing 01 - 12 of 139 Results";
 
 let ProductList = [
     {
-        imgUrl: 'assets/images/shop/01.jpg',
+        imgUrl: '../../assets/images/shop/01.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/02.jpg',
+        imgUrl: '../assets/images/shop/02.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/03.jpg',
+        imgUrl: '../../assets/images/shop/03.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/04.jpg',
+        imgUrl: '../../assets/images/shop/04.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/05.jpg',
+        imgUrl: '../../assets/images/shop/05.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/06.jpg',
+        imgUrl: '../../assets/images/shop/06.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/07.jpg',
+        imgUrl: '../../assets/images/shop/07.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/08.jpg',
+        imgUrl: '../../assets/images/shop/08.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo',
     },
     {
-        imgUrl: 'assets/images/shop/09.jpg',
+        imgUrl: '../../assets/images/shop/09.jpg',
         imgAlt: 'Product Thumb',
         title: 'Product Title Here',
         price: '$200.00',
@@ -91,18 +91,6 @@ const ShopPage = () => {
     const ListView = () => {
         setViewMode('list');
     };
-
-    const showResult = "Showing results"; // Replace this with actual data or prop
-    const ProductList = [ // Example data, replace with actual product data
-        {
-            imgUrl: "path/to/image.jpg",
-            imgAlt: "Product Image",
-            title: "Product Title",
-            price: "$99.99",
-            desc: "Product Description",
-        },
-        // Add more products as needed
-    ];
 
     return (
         <Fragment>

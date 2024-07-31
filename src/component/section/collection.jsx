@@ -9,22 +9,22 @@ const btnText = "Browse All games";
 
 let CollectionListContent = [
     {
-        imgUrl: 'game/red_dead.jpg',
+        imgUrl: '../../assets/images/game/01.png',
         imgAlt: 'collect thumb',
         title: 'Red Dead Redemption 2',
     },
     {
-        imgUrl: 'game/last_of_us.jpg',
+        imgUrl: '../../assets/images/game/02.png',
         imgAlt: 'collect thumb',
         title: 'Last of us part 1',
     },
     {
-        imgUrl: 'game/need_for_speed.jpg',
+        imgUrl: '../../assets/images/game/03.png',
         imgAlt: 'collect thumb',
         title: 'Need for Speed Unbound',
     },
     {
-        imgUrl: 'game/gta_5.jpg',
+        imgUrl: '../../assets/images/game/04.png',
         imgAlt: 'collect thumb',
         title: 'Gta 5',
     },

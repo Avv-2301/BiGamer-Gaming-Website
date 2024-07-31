@@ -30,7 +30,7 @@ function Author(){
         <div>
             <div className="authors">
                 <div className="author-thumb">
-                    <img src="blog/author/01.jpg" alt="author" />
+                    <img src="../../assets/images/blog/author/01.jpg" alt="author" />
                 </div>
                 <div className="author-content">
                     <h6>{Name}</h6>

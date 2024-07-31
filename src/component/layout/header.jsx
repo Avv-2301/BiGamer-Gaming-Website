@@ -1,7 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import { Button} from 'react-bootstrap';
-import { useState, useEffect } from "react";
-import axios from "axios";
+import { useState } from "react";
 
 const contactNumber = "+91 6377608367";
 const contactAddress = "Indore,Madhya Pradesh";
@@ -52,36 +50,11 @@ function Header() {
     }
   });
 
-  axios.defaults.withCredentials = true;
 
   const [auth, setAuth] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
-  // useEffect(() =>{
-  //   axios.get("http://localhost:3000")
-  //   .then(res =>{
-  //       if(res.data.Status === "Success"){
-  //           setAuth(true)
-  //           setName(res.data.name);
-  //       }else{
-  //         setAuth(false)
-  //         setMessage(res.data.Message);
-  //       }
-  //   })
-  // },[])
-
-  // const handleLogout = () =>{
-  //   axios.get("http://localhost:3000/logout")
-  //   .then(res =>{
-  //     if(res.data.Status === "Success"){
-  //       window.location.reload(true);
-  //     }else{
-  //       alert("error");
-  //     }
-        
-  //   }).catch(err =>{console.log(err)})
-  // }
 
   return (
     <div>
@@ -91,7 +64,7 @@ function Header() {
             <div className="brand-logo d-none d-lg-inline-block">
               <div className="logo">
                 <Link to="/">
-                  <img src="logo/logo.png" alt="logo" />
+                  <img src="../../assets/images/logo/logo.png" alt="logo" />
                 </Link>
               </div>
             </div>
@@ -123,7 +96,7 @@ function Header() {
                 <div className="header-wrapper justify-content-lg-end">
                   <div className="mobile-logo d-lg-none">
                     <Link to="/">
-                      <img src="logo/logo.png" alt="logo" />
+                      <img src="../../assets/images/logo/logo.png" alt="logo" />
                     </Link>
                   </div>
                   <div className="menu-area">

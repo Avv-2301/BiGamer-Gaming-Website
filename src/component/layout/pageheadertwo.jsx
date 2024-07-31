@@ -1,7 +1,7 @@
 function PageHeaderTwo(){
     return(
         <div>
-            <section className="pageheader-section" style={{backgroundImage: "url(/pageheader/bg.jpg)"}}>
+            <section className="pageheader-section" style={{backgroundImage: "url(../../assets/images/pageheader/bg.jpg)"}}>
                 <div className="container">
                     <div className="section-wrapper text-center text-uppercase">
                         <div className="pageheader-thumb mb-4">

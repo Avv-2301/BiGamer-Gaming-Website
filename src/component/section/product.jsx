@@ -7,25 +7,25 @@ const title = "explore our products";
 
 let ProductListContent = [
     {
-        imgUrl: 'product/01.jpg',
+        imgUrl: '../../assets/images/product/01.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'product/02.jpg',
+        imgUrl: '../../assets/images/product/02.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'product/03.jpg',
+        imgUrl: '../../assets/images/product/03.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',
     },
     {
-        imgUrl: 'product/04.jpg',
+        imgUrl: '../../assets/images/product/04.jpg',
         imgAlt: 'Product Thumb',
         title: 'Bigamer T-Shirt Here',
         price: '$380.00',

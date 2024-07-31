@@ -10,21 +10,21 @@ const newsdesc = "Bigamer esports organization supported by community leaders";
 
 let FooterItemList = [
     {
-        imgUrl: 'footer/01.jpg',
+        imgUrl: '../../assets/images/footer/01.jpg',
         imgAlt: 'Footer Blog Post',
         title: 'free Poker Game',
         proName: 'Poker',
         proPrice: '$230',
     },
     {
-        imgUrl: 'footer/02.jpg',
+        imgUrl: '../../assets/images/footer/02.jpg',
         imgAlt: 'Footer Blog Post',
         title: 'CLUB Poker Game',
         proName: 'Poker',
         proPrice: '$230',
     },
     {
-        imgUrl: 'footer/03.jpg',
+        imgUrl: '../../assets/images/footer/03.jpg',
         imgAlt: 'Footer Blog Post',
         title: 'ROYAL Poker Game',
         proName: 'Poker',
@@ -53,7 +53,7 @@ function Footer(props){
                                 <div className="footer-top-item lab-item">
                                     <div className="lab-inner">
                                         <div className="lab-thumb">
-                                            <img src="footer/icons/01.png" alt="Phone-icon" />
+                                            <img src="../../assets/images/footer/icons/01.png" alt="Phone-icon" />
                                         </div>
                                         <div className="lab-content">
                                             <span>Phone Number : +88019 339 702 520</span>
@@ -65,7 +65,7 @@ function Footer(props){
                                 <div className="footer-top-item lab-item">
                                     <div className="lab-inner">
                                         <div className="lab-thumb">
-                                            <img src="footer/icons/02.png" alt="email-icon" />
+                                            <img src="../../assets/images/footer/icons/02.png" alt="email-icon" />
                                         </div>
                                         <div className="lab-content">
                                             <span>Email : youremail@gmail.com</span>
@@ -77,7 +77,7 @@ function Footer(props){
                                 <div className="footer-top-item lab-item">
                                     <div className="lab-inner">
                                         <div className="lab-thumb">
-                                            <img src="footer/icons/03.png" alt="location-icon" />
+                                            <img src="../../assets/images/footer/icons/03.png" alt="location-icon" />
                                         </div>
                                         <div className="lab-content">
                                             <span>Address : 30 North West New York 240</span>
@@ -88,14 +88,14 @@ function Footer(props){
                         </div>
                     </div>
                 </div>
-                <div className="footer-middle padding-top padding-bottom" style={{backgroundImage: "url(/footer/bg.jpg)"}}>
+                <div className="footer-middle padding-top padding-bottom" style={{backgroundImage: "url(../../assets/images/footer/bg.jpg)"}}>
                     <div className="container">
                         <div className="row padding-lg-top">
                             <div className="col-lg-4 col-md-6 col-12">
                                 <div className="footer-middle-item-wrapper">
                                     <div className="footer-middle-item mb-lg-0">
                                         <div className="fm-item-title mb-4">
-                                            <img src="logo/logo.png" alt="logo" />
+                                            <img src="../../assets/images/logo/logo.png" alt="logo" />
                                         </div>
                                         <div className="fm-item-content">
                                             <p className="mb-4">{desc}</p>
@@ -176,7 +176,7 @@ function Footer(props){
                         <div className="row">
                             <div className="col-12">
                                 <div className="footer-bottom-content text-center">
-                                    <p>&copy;2022 <Link to="/">BiGamer</Link> - eSpost And Gameing React Template.</p>
+                                    <p>&copy;2024 <Link to="/">BiGamer</Link> - eSports And Gaming React Template.</p>
                                 </div>
                             </div>
                         </div>

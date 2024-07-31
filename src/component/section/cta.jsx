@@ -17,7 +17,7 @@ function CtaSection(props){
             <section className="cta-section padding-bottom">
                 <div className="container">
                     <div className="cta-wrapper item-layer">
-                        <div className="cta-item px-4 px-sm-5 pt-4 pt-sm-5 pt-lg-0" style={{backgroundImage: "url(/assets/images/cta/bg.jpg)"}}>
+                        <div className="cta-item px-4 px-sm-5 pt-4 pt-sm-5 pt-lg-0" style={{backgroundImage: "url(../../assets/images/cta/bg.jpg)"}}>
                             <div className="row align-items-center">
                                 <div className="col-lg-6">
                                     <div className="cta-content">

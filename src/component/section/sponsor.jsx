@@ -8,35 +8,35 @@ const btnText = "BECOME A PARTNER";
 
 let SponsorListContent = [
     {
-        imgUrl: 'sponsor/01.png',
+        imgUrl: '../../assets/images/sponsor/01.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/02.png',
+        imgUrl: '../../assets/images/sponsor/02.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/03.png',
+        imgUrl: '../../assets/images/sponsor/03.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/04.png',
+        imgUrl: '../../assets/images/sponsor/04.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/05.png',
+        imgUrl: '../../assets/images/sponsor/05.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/06.png',
+        imgUrl: '../../assets/images/sponsor/06.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/07.png',
+        imgUrl: '../../assets/images/sponsor/07.png',
         imgAlt: 'Sponsor Thumb',
     },
     {
-        imgUrl: 'sponsor/08.png',
+        imgUrl: '../../assets/images/sponsor/08.png',
         imgAlt: 'Sponsor Thumb',
     },
 ]

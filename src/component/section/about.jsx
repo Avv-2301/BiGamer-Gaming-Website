@@ -6,19 +6,19 @@ const desc = "Distinctively provide acces mutfuncto users whereas transparent pr
 
 let AboutListContent = [
     {
-        imgUrl: 'about/icon-1.png',
+        imgUrl: '../../assets/images/about/icon-1.png',
         imgAlt: 'About Icon',
         title: '103k Community Earning',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
     },
     {
-        imgUrl: 'about/icon-2.png',
+        imgUrl: '../../assets/images/about/icon-2.png',
         imgAlt: 'About Icon',
         title: '34m+ Registered Players',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
     },
     {
-        imgUrl: 'about/icon-3.png',
+        imgUrl: '../../assets/images/about/icon-3.png',
         imgAlt: 'About Icon',
         title: '240k Streams Complete',
         desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',

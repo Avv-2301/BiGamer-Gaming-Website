@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 
 const contactNumber = "+91 6377608367";
-const contactAddress = "Indore,Madhya Pradesh";
+const contactAddress = "Bhilwara, Rajasthan";
 
 let SocialMideaList = [
   {
@@ -50,11 +50,9 @@ function Header() {
     }
   });
 
-
   const [auth, setAuth] = useState(false);
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
-
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <div>
@@ -101,25 +99,8 @@ function Header() {
                   </div>
                   <div className="menu-area">
                     <ul className="menu">
-                      <li className="menu-item-has-children">
-                        <a
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          data-bs-offset="0,0"
-                        >
-                          Home
-                        </a>
-                        <ul className="submenu dropdown-menu">
-                          <li>
-                            <NavLink to="/">Home One</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/index-2">Home Two</NavLink>
-                          </li>
-                        </ul>
+                      <li> 
+                          <NavLink to='/'>Home</NavLink>
                       </li>
 
                       <li className="menu-item-has-children">
@@ -137,102 +118,55 @@ function Header() {
                           className="submenu dropdown-menu"
                           aria-labelledby="dropdown"
                         >
-                          <li>
-                            <NavLink to="/about">About</NavLink>
-                          </li>
+                          
                           <li>
                             <NavLink to="/gallery">gallery</NavLink>
                           </li>
                           <li>
-                            <NavLink to="/game-list">game list 1</NavLink>
+                            <NavLink to="/game-list">All Games</NavLink>
                           </li>
                           <li>
-                            <NavLink to="/game-list2">game list 2</NavLink>
+                            <NavLink to="/game-list2">Tournaments</NavLink>
                           </li>
                           <li>
                             <NavLink to="/partners">partners</NavLink>
                           </li>
                           <li>
-                            <NavLink to="/achievements">achievement</NavLink>
+                            <NavLink to="/achievements">Achievement</NavLink>
                           </li>
                           <li>
-                            <NavLink to="/team">team</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/team-single">team single</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/404">404 Page</NavLink>
+                            <NavLink to="/team">teams</NavLink>
                           </li>
                         </ul>
                       </li>
-                      <li className="menu-item-has-children">
-                        <a
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          data-bs-offset="0,0"
-                        >
-                          Shop
-                        </a>
-                        <ul className="submenu dropdown-menu">
-                          <li>
-                            <NavLink to="/shop">shop</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/shop-single">Shop Details</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/cart-page">Cart Page</NavLink>
-                          </li>
-                        </ul>
+
+                      <li>
+                        <NavLink to="/shop">Shop</NavLink>
                       </li>
-                      <li className="menu-item-has-children">
-                        <a
-                          href="#"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          data-bs-offset="0,0"
-                        >
-                          Blog
-                        </a>
-                        <ul className="submenu dropdown-menu">
-                          <li>
-                            <NavLink to="/blog">Blog</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/blog-2">Blog 2</NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/blog-single">Blog Single</NavLink>
-                          </li>
-                        </ul>
+                      <li>
+                          <NavLink to='/blog'>Blogs</NavLink>
                       </li>
                       <li>
                         <NavLink to="/contact">Contact</NavLink>
                       </li>
+                      <li>
+                        <NavLink to="/about">About Us</NavLink>
+                      </li>
                     </ul>
-    
-                
-                    <div>
-                    <Link to="/login" className="login">
-                      <i className="icofont-user"></i> <span>LOG IN</span>
-                    </Link>
 
-                    <Link to="/signup" className="signup">
-                      <i className="icofont-users"></i> <span>SIGN UP</span>
-                    </Link>
+                    <div>
+                      <Link to="/login" className="login">
+                        <i className="icofont-user"></i> <span>LOG IN</span>
+                      </Link>
+
+                      <Link to="/signup" className="signup">
+                        <i className="icofont-users"></i> <span>SIGN UP</span>
+                      </Link>
                     </div>
-                    
-                 
+
                     {/* <Button className="signup" onClick={handleLogout}>
                      <span>Logout</span>
                     </Button> */}
-                
 
                     <div className="header-bar d-lg-none" onClick={menuTrigger}>
                       <span></span>

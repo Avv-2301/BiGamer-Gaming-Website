@@ -56,7 +56,7 @@ function Footer(props){
                                             <img src="../../assets/images/footer/icons/01.png" alt="Phone-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Phone Number : +88019 339 702 520</span>
+                                            <span>Phone Number : +91 6377608367</span>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@ function Footer(props){
                                             <img src="../../assets/images/footer/icons/02.png" alt="email-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Email : youremail@gmail.com</span>
+                                            <span>Email : akshatvijayvergiya64@gmail.com</span>
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ function Footer(props){
                                             <img src="../../assets/images/footer/icons/03.png" alt="location-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Address : 30 North West New York 240</span>
+                                            <span>Address : Subhash Nagar Bhilwara</span>
                                         </div>
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@ function Footer(props){
                         <div className="row">
                             <div className="col-12">
                                 <div className="footer-bottom-content text-center">
-                                    <p>&copy;2024 <Link to="/">BiGamer</Link> - eSports And Gaming React Template.</p>
+                                    <p>&copy;2024 <Link to="/">BiGamer</Link> - E-Sports And Gaming</p>
                                 </div>
                             </div>
                         </div>

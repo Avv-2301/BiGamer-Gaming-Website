@@ -27,6 +27,7 @@ const LogIn = () => {
                         <form action="" onSubmit={handleSubmit} className="account-form">
                             <div className="form-group">
                                 <input
+                                    required
                                     type="text"
                                     name="name"
                                     id="item01"
@@ -37,6 +38,7 @@ const LogIn = () => {
                             </div>
                             <div className="form-group">
                                 <input
+                                    required
                                     type="password"
                                     name="password"
                                     id="item02"

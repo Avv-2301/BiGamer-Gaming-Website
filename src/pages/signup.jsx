@@ -25,6 +25,7 @@ const SignUp = () => {
                         <form className="account-form">
                             <div className="form-group">
                                 <input
+                                    required
                                     type="text"
                                     name="name"
                                     id="item01"
@@ -35,6 +36,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-group">
                                 <input
+                                    required
                                     type="text"
                                     name="name"
                                     id="item02"
@@ -45,6 +47,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-group">
                                 <input 
+                                    required
                                     type="text"
                                     name="email"
                                     id="item03"
@@ -55,6 +58,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-group">
                                 <input 
+                                    required
                                     type="password"
                                     name="password"
                                     id="item04"
@@ -65,6 +69,7 @@ const SignUp = () => {
                             </div>
                             <div className="form-group">
                                 <input 
+                                    required
                                     type="password"
                                     name="conpassword"
                                     id="item05"

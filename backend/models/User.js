@@ -20,7 +20,7 @@ const UserSchema = new mongoose.Schema(
     },
     accountType: {
       type: String,
-      enum: ["Admin"],
+      enum: ["Admin", 'User'],
       required: true,
     },
     profile: {

@@ -99,9 +99,6 @@ function Header() {
                   </div>
                   <div className="menu-area">
                     <ul className="menu">
-                      <li> 
-                          <NavLink to='/'>Home</NavLink>
-                      </li>
 
                       <li className="menu-item-has-children">
                         <a

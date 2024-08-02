@@ -23,11 +23,6 @@ const UserSchema = new mongoose.Schema(
       enum: ["Admin", 'User'],
       required: true,
     },
-    profile: {
-      type: mongoose.Schema.Types.ObjectId,
-      required: true,
-      ref: "Profile",
-    },
     games: [
       {
         type: mongoose.Schema.Types.ObjectId,

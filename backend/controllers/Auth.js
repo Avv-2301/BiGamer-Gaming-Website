@@ -2,6 +2,7 @@ const User = require("../models/User");
 const mailSender = require("../utils/mailSender");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+require('dotenv').config()
 
 exports.signUp = async (req, res) => {
   try {
@@ -14,7 +15,7 @@ exports.signUp = async (req, res) => {
       });
     }
 
-    if (password == confirmPassword) {
+    if (password !== confirmPassword) {
       return res.status(400).json({
         success: false,
         message: "Password and confirm password not matched",
@@ -36,7 +37,7 @@ exports.signUp = async (req, res) => {
       lastName,
       email,
       password: hashedPassword,
-      accountType: User,
+      accountType: "User",
       image: "https://api.dicebear.com/5.x/initials/svg?seed",
     });
 
@@ -46,9 +47,10 @@ exports.signUp = async (req, res) => {
       data: user,
     });
   } catch (error) {
+    console.log(error)
     return res.status(500).json({
       success: false,
-      message: "Internal server error",
+      message: error.message,
     });
   }
 };
@@ -67,7 +69,7 @@ exports.login = async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.atatus(400).json({
+      return res.status(400).json({
         success: false,
         message: "User not present Please register first",
       });

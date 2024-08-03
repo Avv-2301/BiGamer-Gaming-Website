@@ -80,7 +80,7 @@ exports.login = async (req, res) => {
         {
           email: user.email,
           id: user._id,
-          role: user.role,
+          role: user.accountType,
         },
         process.env.JWT_SECRET,
         {

@@ -6,7 +6,7 @@ require('dotenv').config();
 
 
 const createAdmin = async(req,res) =>{
-    await mongoose.connect(process.env.MONGODB_URL)
+    await mongoose.connect("mongodb+srv://akshatvijayvergiya64:NA09rgAFQbJqSdY0@cluster0.ds0fsxj.mongodb.net/BiGamerDatabase")
     .then(() =>console.log('CONNECTED TO DATABASE'))
     .catch((error) =>{
         console.log(error)
@@ -17,29 +17,30 @@ const createAdmin = async(req,res) =>{
     const existingAdmin = await User.findOne({role:'Admin'})
 
     if(!existingAdmin){
-        const adminCredentials = {
-            firstName:process.env.ADMIN_FIRSTNAME,
-            lastName:process.env.ADMIN_LASTNAME,
-            email:process.env.ADMIN_EMAIL,
-            password:process.env.ADMIN__PASSWORD,
-            role:'Admin'
-        }
+        const user = await User.create({
+            firstName: process.env.ADMIN_FIRSTNAME,
+            lastName: process.env.ADMIN_LASTNAME,
+            email: process.env.ADMIN_EMAIL,
+            password: process.env.ADMIN_PASSWORD,
+            accountType: 'Admin'
+        })
 
-        const hashedPassword = await bcrypt.hash(adminCredentials.password, 10);
-        adminCredentials.password = hashedPassword;
+        const salt = await bcrypt.genSalt(10)
+        const hashedPassword = await bcrypt.hash(adminCredentials.password, salt);
+        user.password = hashedPassword;
 
-        await User.create(adminCredentials);
         console.log('ADMIN CREATED SUCCESSFULLY');
     }
     else{
         console.log('ADMIN NOT CREATED');
     }
+    await mongoose.disconnect();
 }
 
-createAdmin.then(() =>{
+createAdmin().then(() =>{
     console.log('ADMIN SEEDING COMPLETED');
     process.exit(0);
 }).catch((error) =>{
-  console.error("Error seeding admin:", err);
+  console.error("Error seeding admin:", error);
   process.exit(1);
-})
+});

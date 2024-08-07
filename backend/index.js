@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const userRoutes = require('./routes/userRoutes');  
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const adminRoutes = require('./routes/adminRoutes/adminRoute');
 
 require('dotenv').config()
 
@@ -25,6 +26,7 @@ app.use(
 )
 
 app.use('/api/v1/userauth',userRoutes)
+app.use('/api/v1/admin', adminRoutes);
 
 app.get('/', (req,res) =>{
     return res.json({

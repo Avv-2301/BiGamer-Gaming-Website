@@ -8,7 +8,7 @@ exports.adminLogin = async (req, res) => {
     const { email, password } = req.body;
 
     if (!email || !password) {
-      return res.status(204).json({
+      return res.status(400).json({
         success: false,
         message: "All fields are required",
       });
@@ -46,6 +46,10 @@ exports.adminLogin = async (req, res) => {
           httpOnly: true,
           expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         };
+
+        // Debugging: log the token and cookie options
+        console.log("Token created:", token);
+        console.log("Cookie options:", options);
 
         return res.cookie("token", token, options).status(200).json({
           success: true,

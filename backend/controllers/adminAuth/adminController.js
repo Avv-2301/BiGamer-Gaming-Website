@@ -3,7 +3,7 @@ const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
 require('dotenv').config()
 
-exports.adminAuth = async (req, res) => {
+exports.adminLogin = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -18,7 +18,15 @@ exports.adminAuth = async (req, res) => {
 
     if (user) {
       if (user.accountType === "Admin") {
-        await bcrypt.compare(password, user.password);
+        const isPasswordCorrect = await bcrypt.compare(password, user.password);
+
+        if (!isPasswordCorrect) {
+          return res.status(400).json({
+            success: false,
+            message: "Password is incorrect",
+          });
+        }
+
         const token = jwt.sign(
           {
             email: user.email,
@@ -35,11 +43,11 @@ exports.adminAuth = async (req, res) => {
         user.password = undefined;
 
         const options = {
-          http: true,
-          expiresIn: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
+          httpOnly: true,
+          expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
         };
 
-        res.cookie("token", token, options).sttus(200).json({
+        return res.cookie("token", token, options).status(200).json({
           success: true,
           user,
           token,
@@ -48,16 +56,20 @@ exports.adminAuth = async (req, res) => {
       } else {
         return res.status(400).json({
           success: false,
-          message: "Password is incorrect",
+          message: "User is not an admin",
         });
       }
     } else {
+      return res.status(404).json({
+        success: false,
+        message: "User not found",
+      });
     }
   } catch (error) {
     console.log(error);
     return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Something went wrong while validating the token",
     });
   }
 };

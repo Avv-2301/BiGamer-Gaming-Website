@@ -1,7 +1,7 @@
 const bcrypt = require("bcrypt");
 const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
-require('dotenv').config();
+require("dotenv").config();
 
 exports.adminLogin = async (req, res) => {
   try {
@@ -14,63 +14,54 @@ exports.adminLogin = async (req, res) => {
       });
     }
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ accountType:'Admin' });
 
-    if (user) {
-      if (user.accountType === "Admin") {
-        const isPasswordCorrect = await bcrypt.compare(password, user.password);
-        
-        if (isPasswordCorrect) {
-          const token = jwt.sign(
-            {
-              email: user.email,
-              id: user._id,
-              role: user.accountType,
-            },
-            process.env.JWT_SECRET,
-            {
-              expiresIn: "24h",
-            }
-          );
+    if(user){
+      const isPasswordCorrect = await bcrypt.compare(password, user.password);
+      console.log(isPasswordCorrect)
 
-          user.token = token;
-          user.password = undefined;
+      if (isPasswordCorrect) {
+        const token = jwt.sign(
+          { email: user.email, id: user._id, accountType: user.accountType },
+          process.env.JWT_SECRET,
+          {
+            expiresIn: "24h",
+          }
+        )
 
-          const options = {
-            expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-            httpOnly: true,
-          };
-          console.log(token, 'token')
+        user.token = token;
+        user.password = undefined;
 
-          return res.cookie('token', token, options).status(200).json({
-            success: true,
-            token,
-            user,
-            message: 'Login successful',
-          });
-        } else {
-          return res.status(400).json({
-            success: false,
-            message: "Password is incorrect",
-          });
-        }
+        const options = {
+          expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
+          httpOnly: true,
+        };
+
+        res.cookie("token", token, options).status(200).json({
+          success: true,
+          token,
+          user,
+          message: "Login successful",
+        });
       } else {
         return res.status(400).json({
           success: false,
-          message: "User is not an admin",
+          message: "Password is incorrect",
         });
       }
-    } else {
-      return res.status(404).json({
-        success: false,
-        message: "User not found",
-      });
+    }else{
+      return res.status(401).json({
+        success:false,
+        message:'User is not Admin'
+      })
     }
+      
+    
   } catch (error) {
     console.log(error);
     return res.status(500).json({
       success: false,
-      message: "Something went wrong while validating the token",
+      message: "Login failure",
     });
   }
 };

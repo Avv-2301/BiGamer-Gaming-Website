@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const user = require("../models/User");
 const User = require("../models/User");
 require("dotenv").config();
 
@@ -64,9 +63,9 @@ exports.isUser = async (req, res, next) => {
 
 exports.isAdmin = async (req, res, next) => {
   try {
-    const userDetails = await User.findOne({ email: req.user.email });
+    const userDetails = await User.findOne({ accountType:'Admin' });
 
-    if (!userDetails.accountType !== "Admin") {
+    if (userDetails.accountType !== "Admin") {
       return res.status(401).json({
         success: false,
         message: "It is a protected route for Admin",

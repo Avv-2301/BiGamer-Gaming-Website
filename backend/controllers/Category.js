@@ -27,3 +27,23 @@ exports.createCategory = async(req, res) =>{
         })
     }
 }
+
+
+exports.showCategory = async(req, res) =>{
+    try{
+        console.log('INSIDE SHOW ALL CATEGORY');
+        const allCategory = await Category.find({})
+        return res.status(200).json({
+            success:true,
+            message:'All category fetched successflly',
+            data: allCategory
+        })
+    }
+    catch(error){
+        console.log(error)
+        return res.status(500).json({
+            success: false,
+            message: error.message
+        })
+    }
+}

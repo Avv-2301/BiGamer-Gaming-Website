@@ -9,12 +9,20 @@ const gamesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  Price: {
+  price: {
     type: Number,
+    required:true
   },
   thumbnail: {
+    type: String,
+    required:true
+  },
+  images: [
+    {
       type: String,
+      required:true
     },
+  ],
   minimumRequirements: {
     type: String,
     required: true,
@@ -22,6 +30,15 @@ const gamesSchema = new mongoose.Schema({
   maximumRequirement: {
     type: String,
     required: true,
+  },
+  usersEnrolled:{
+    type: mongoose.Schema.Types.ObjectId,
+    required:true,
+    ref:'User'
+  },
+  currentStatus: {
+    type: String,
+    enum: ["Draft", "Published", "Coming Soon"],
   },
   library: {
     type: mongoose.Schema.Types.ObjectId,
@@ -37,6 +54,7 @@ const gamesSchema = new mongoose.Schema({
   category: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Category",
+    required:true
   },
   createdAt: {
     type: Date,

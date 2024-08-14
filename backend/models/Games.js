@@ -12,11 +12,9 @@ const gamesSchema = new mongoose.Schema({
   Price: {
     type: Number,
   },
-  thumbnail: [
-    {
+  thumbnail: {
       type: String,
     },
-  ],
   minimumRequirements: {
     type: String,
     required: true,

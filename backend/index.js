@@ -2,10 +2,13 @@ const express = require('express');
 const app = express();
 const database = require('./config/database');
 const cookieParser = require('cookie-parser');
-const userRoutes = require('./routes/userRoutes');  
+const userRoute = require('./routes/userRoutes');  
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const adminRoutes = require('./routes/adminRoutes/adminRoute');
+const gameRoute = require('./routes/gameRoutes');
+const {cloudinaryConnect} = require('./config/cloudinary');
+const fileUpload = require('express-fileupload');
 
 require('dotenv').config()
 
@@ -25,8 +28,17 @@ app.use(
 	})
 )
 
-app.use('/api/v1/userauth',userRoutes)
+app.use(
+	fileUpload({
+		useTempFiles:true,
+		tempFileDir:"/tmp",
+	})
+)
+cloudinaryConnect();
+
+app.use('/api/v1/userauth',userRoute)
 app.use('/api/v1/admin', adminRoutes);
+app.use('/api/v1/game', gameRoute);
 
 app.get('/', (req,res) =>{
     return res.json({

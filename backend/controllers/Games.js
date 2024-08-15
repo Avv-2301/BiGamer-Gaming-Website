@@ -107,3 +107,32 @@ exports.createGame = async (req, res) => {
     });
   }
 };
+
+
+exports.getAllGames = async(req,res) =>{
+  try{
+    const allGames = await Games.find({currentStatus: 'Published'},
+      {
+        gameName:true,
+        gameDescription:true,
+        pricetrue,
+        thumbnail:true,
+        images:true,
+
+      }
+    )
+    return res.status(200).json({
+      success:true,
+      message:'All games fetched successfully',
+      data:allGames
+    })
+  }
+  catch(error){
+    console.log(error)
+    return res.status(500).json({
+      success:false,
+      message:'CanNot get all games',
+      error:error.message
+    })
+  }
+}
